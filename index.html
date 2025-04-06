@@ -8,14 +8,58 @@
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #eeeae9;
+      background: linear-gradient(to bottom right, #fefaf6, #f3ede9);
       color: #3d250d;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* 背景柔霧光暈裝飾 */
+    .blur-background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .blur-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.2;
+      animation: float 10s ease-in-out infinite alternate;
+    }
+
+    .circle-1 {
+      width: 300px;
+      height: 300px;
+      background: #e8d9c1;
+      top: 10%;
+      left: 10%;
+    }
+
+    .circle-2 {
+      width: 400px;
+      height: 400px;
+      background: #fff7ee;
+      bottom: 5%;
+      right: 5%;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(30px); }
     }
 
     header {
-      background: url('image/Nailady_header1.png') center/cover no-repeat;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5dacb;
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     }
 
     header img {
@@ -28,6 +72,7 @@
     h1 {
       font-size: 2rem;
       margin-top: 1rem;
+      color: #9d7c63;
     }
 
     .social-icons {
@@ -36,17 +81,17 @@
       gap: 30px;
       margin-top: 40px;
     }
-    
+
     .icon-img {
-      width: 60px;  /* 圖片大小可調整 */
+      width: 60px;
       height: 60px;
       transition: transform 0.3s ease, filter 0.3s ease;
       cursor: pointer;
     }
-    
+
     .icon-img:hover {
-      transform: scale(1.1); /* 懸浮放大一點點 */
-      filter: brightness(1.2); /* 懸浮時略為提亮 */
+      transform: scale(1.1);
+      filter: brightness(1.2);
     }
 
     .gallery {
@@ -54,7 +99,6 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
       padding: 2rem;
-      background: url('image/Nailady_header2.png') center/contain repeat;
     }
 
     .gallery img {
@@ -77,6 +121,13 @@
   </style>
 </head>
 <body>
+
+  <!-- 柔霧背景光暈 -->
+  <div class="blur-background">
+    <div class="blur-circle circle-1"></div>
+    <div class="blur-circle circle-2"></div>
+  </div>
+
   <header>
     <img src="image/Nailady_logo.png" alt="Nailady Logo">
     <h1>Nailady 美甲工作室</h1>
@@ -93,7 +144,6 @@
       <img src="image/icon_line.png" alt="Line" class="icon-img">
     </a>
   </div>
-
 
   <section class="gallery">
     <img src="image/Nailady_img1.png" alt="Nail Sample 1">
