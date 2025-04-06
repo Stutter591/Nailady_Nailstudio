@@ -30,17 +30,48 @@
       margin-top: 1rem;
     }
 
-    .social-links {
-      text-align: center;
-      margin: 1rem 0;
-    }
+/* 社群按鈕容器 */
+.social-links {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  gap: 20px; /* 按鈕之間的間隔 */
+  margin-top: 30px;
+}
 
-    .social-links a {
-      margin: 0 1rem;
-      color: #3d250d;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* 社群按鈕樣式 */
+.social-link {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #3d250d; /* 初始背景色為棕色 */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* 每個社群連結的顏色 */
+.instagram {
+  background-color: #e4405f; /* Instagram 的顏色 */
+}
+
+.facebook {
+  background-color: #1877f2; /* Facebook 的顏色 */
+}
+
+.line {
+  background-color: #00c300; /* Line 的顏色 */
+}
+
+/* 懸浮效果 */
+.social-link:hover {
+  transform: translateY(-5px); /* 懸浮時上移效果 */
+  background-color: #333; /* 懸浮時改變背景顏色 */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* 增加陰影效果 */
+}
 
     .gallery {
       display: grid;
