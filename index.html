@@ -15,6 +15,14 @@
       position: relative;
     }
 
+    /* 禁止右鍵選單 */
+    body {
+      -webkit-user-select: none; /* 禁止選擇文字 */
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
     /* 背景柔霧光暈裝飾 */
     .blur-background {
       position: absolute;
@@ -78,7 +86,7 @@
       flex-wrap: wrap;
       margin-top: 1rem;
     }
-    
+
     .logo-en {
       font-family: 'EB Garamond', serif;
       font-size: 3.5rem;
@@ -86,7 +94,7 @@
       color: #3d250d;
       letter-spacing: 1px;
     }
-    
+
     .logo-ch {
       font-family: 'Noto Serif TC', serif;
       font-size: 2.0rem;
@@ -121,11 +129,13 @@
       padding: 2rem;
     }
 
+    /* 禁止圖片拖曳 */
     .gallery img {
       width: 100%;
       border-radius: 1rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
+      pointer-events: none; /* 禁止拖曳 */
     }
 
     .gallery img:hover {
@@ -144,7 +154,7 @@
       font-size: 1rem;
       color: #5b3f2d;
     }
-    
+
     .sub-info .address {
       display: flex;
       justify-content: center;
@@ -152,12 +162,12 @@
       gap: 8px;
       margin-bottom: 0.5rem;
     }
-    
+
     .sub-info .address img {
       width: 20px;
       height: 20px;
     }
-    
+
     .sub-info .notice {
       font-size: 0.95rem;
       margin: 0;
@@ -179,7 +189,7 @@
       <span class="logo-ch">美甲工作室</span>
     </h1>
   
-      <div class="sub-info">
+    <div class="sub-info">
       <div class="address">
         <img src="image/icon_pin.png" alt="Location Icon">
         <span>捷運忠孝復興站，1號出口走路兩分鐘</span>
@@ -201,13 +211,20 @@
   </div>
 
   <section class="gallery">
-    <img src="image/Nailady_img1.png" alt="Nail Sample 1">
-    <img src="image/Nailady_img2.png" alt="Nail Sample 2">
-    <img src="image/Nailady_img3.png" alt="Nail Sample 3">
+    <img src="image/Nailady_img1.png" alt="Nail Sample 1" ondragstart="return false;">
+    <img src="image/Nailady_img2.png" alt="Nail Sample 2" ondragstart="return false;">
+    <img src="image/Nailady_img3.png" alt="Nail Sample 3" ondragstart="return false;">
   </section>
 
   <footer>
     &copy; 2025 Nailady 光療美甲工作室｜All Rights Reserved
   </footer>
+
+  <script>
+    // 禁止右鍵功能
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
+    });
+  </script>
 </body>
 </html>
