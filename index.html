@@ -76,6 +76,7 @@
       border-radius: 50%;
       background-color: rgba(255, 255, 255, 0.6);
       padding: 0.5rem;
+      pointer-events: none; /* 禁止LOGO被拖曳 */
     }
 
     h1 {
@@ -183,7 +184,7 @@
   </div>
 
   <header>
-    <img src="image/Nailady_logo.png" alt="Nailady Logo">
+    <img src="image/Nailady_logo.png" alt="Nailady Logo" ondragstart="return false;" oncontextmenu="return false;">
     <h1>
       <span class="logo-en">Nailady</span>
       <span class="logo-ch">美甲工作室</span>
@@ -194,7 +195,7 @@
         <img src="image/icon_pin.png" alt="Location Icon">
         <span>捷運忠孝復興站，1號出口走路兩分鐘</span>
       </div>
-      <p class="notice">｜每月15號中午12點開放舊客預約，詳情請至LINE官方帳號操作｜</p>
+      <p class="notice">｜每月15號中午12點開放舊客預約，預約詳情請至LINE官方帳號操作，更多美甲款式都在IG帳號上歡迎追蹤♥｜</p>
     </div>
   </header>
 
@@ -211,9 +212,9 @@
   </div>
 
   <section class="gallery">
-    <img src="image/Nailady_img1.png" alt="Nail Sample 1" ondragstart="return false;">
-    <img src="image/Nailady_img2.png" alt="Nail Sample 2" ondragstart="return false;">
-    <img src="image/Nailady_img3.png" alt="Nail Sample 3" ondragstart="return false;">
+    <img src="image/Nailady_img1.png" alt="Nail Sample 1" ondragstart="return false;" oncontextmenu="return false;">
+    <img src="image/Nailady_header1.png" alt="Nail Sample 2" ondragstart="return false;" oncontextmenu="return false;">
+    <img src="image/Nailady_img3.png" alt="Nail Sample 3" ondragstart="return false;" oncontextmenu="return false;">
   </section>
 
   <footer>
