@@ -10,7 +10,7 @@ Nailady 光療美甲工作室
 
 **Line**：[點擊加LINE立即預約](https://line.me/R/ti/p/@144lktxt)
 
-**Facebook**：[點擊追蹤Facebook頁面享更多折扣](https://www.facebook.com/nailadystudio.tw)
+**Facebook**：[點擊追蹤Facebook頁面](https://www.facebook.com/nailadystudio.tw)
 
 <span style="color: #ff69b4">感謝您的光臨與支持！</span>
 
