@@ -12,5 +12,3 @@ Nailady 光療美甲工作室
 
 **Facebook**：[點擊追蹤Facebook頁面](https://www.facebook.com/nailadystudio.tw)
 
-<span style="color: #ff69b4">感謝您的光臨與支持！</span>
-
