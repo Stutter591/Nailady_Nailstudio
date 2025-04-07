@@ -71,13 +71,27 @@
     }
 
     h1 {
-      font-family: 'Great Vibes', 'Playfair Display', 'Noto Serif TC', serif;
-      font-size: 2.5rem;
-      font-weight: normal;
-      color: #3d250d;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
       margin-top: 1rem;
+    }
+    
+    .logo-en {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8rem;
+      color: #3d250d;
+    }
+    
+    .logo-ch {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.6rem;
+      color: #3d250d;
       letter-spacing: 1px;
     }
+
 
     .social-icons {
       display: flex;
@@ -158,9 +172,12 @@
 
   <header>
     <img src="image/Nailady_logo.png" alt="Nailady Logo">
-    <h1>Nailady 美甲工作室</h1>
+    <h1>
+      <span class="logo-en">Nailady</span>
+      <span class="logo-ch">美甲工作室</span>
+    </h1>
   
-    <div class="sub-info">
+      <div class="sub-info">
       <div class="address">
         <img src="image/icon_pin.png" alt="Location Icon">
         <span>捷運忠孝復興站，1號出口走路兩分鐘</span>
